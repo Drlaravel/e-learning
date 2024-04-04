@@ -1,5 +1,5 @@
 .navContainer {
-  width: 100%;
+  width: 100vw;
   height: 100px;
   background-color: var(--first-bg);
   position: fixed;
