@@ -9,7 +9,7 @@ import {
 } from 'react-icons/fa';
 import Logo from '../../assets/img/logo/logo.png';
 
-export default function footer() {
+export default function Footer() {
   return (
     <footer className='footer'>
       <div className='footerWrapper'>

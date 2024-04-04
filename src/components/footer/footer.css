@@ -37,6 +37,8 @@
 
 .footerListGroup li:hover {
   opacity: 80%;
+  transform: translateY(1px);
+  color: var(--primary-color);
 }
 
 .footerListGroup span {

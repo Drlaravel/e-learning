@@ -1,9 +1,12 @@
+import { useState } from "react";
 import './header.css';
 import Logo from './../../assets/img/logo/logo.png';
 import { IoSearch } from 'react-icons/io5';
 import { FaChevronDown } from 'react-icons/fa';
 
-export default function header() {
+
+export default function Header() {
+  const [searchBoxButton, setsearchBoxButton] = useState(false)
   return (
     <header className='navContainer'>
       <div className='navWrapper'>
@@ -20,11 +23,14 @@ export default function header() {
               name='navSearch'
               id='navSearch'
               placeholder='Want to Learn?'
+
             />
-            <div className='dropDown'>
+
+            <button className={`dropDown ${searchBoxButton ? 'active' : ''}`} onClick={() => setsearchBoxButton(!searchBoxButton)}>
               <span>Explore</span>
               <FaChevronDown className='downIco' />
-            </div>
+            </button>
+
           </div>
         </div>
         <div className='navLinks'>
@@ -35,17 +41,17 @@ export default function header() {
           <li>FAQ's</li>
         </div>
         <div className='navActions'>
-          <span className='navSign'>Sign in</span>
-          <span className='navCreateAccount'>Create free account</span>
+          <button className='navSign'>Sign in</button>
+          <button className='navCreateAccount'>Create free account</button>
         </div>
-        <label class='hamburger'>
+        <label className='hamburger'>
           <input type='checkbox'></input>
           <svg viewBox='0 0 32 32'>
             <path
-              class='line line-top-bottom'
+              className='line line-top-bottom'
               d='M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22'
             ></path>
-            <path class='line' d='M7 16 27 16'></path>
+            <path className='line' d='M7 16 27 16'></path>
           </svg>
         </label>
       </div>

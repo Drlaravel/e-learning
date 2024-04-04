@@ -68,10 +68,10 @@
 }
 
 .navSearchBtn:hover {
-  color: var(--main-color);
+  color: var(--primary-color);
 }
 
-.dropDown:hover .downIco {
+.dropDown.active .downIco {
   transform: rotate(180deg);
 }
 
@@ -80,7 +80,7 @@
 }
 
 .dropDown {
-  color: var(--main-color);
+  color: var(--primary-color);
   background: #effff2;
   padding: 8px 16px;
   cursor: pointer;
@@ -119,10 +119,11 @@
 .navLinks li:hover,
 .navSign:hover {
   transform: translateY(1px);
+  color: var(--primary-color);
 }
 
 .navLinks .active {
-  color: var(--main-color);
+  color: var(--primary-color);
 }
 
 /* ─────────────► Nav Action Section */
@@ -135,9 +136,9 @@
 
 .navCreateAccount {
   padding: 8px 16px;
-  background: var(--main-color);
-  border: 4px solid #f4ebff;
+  background: var(--primary-color);
   border-radius: 12px;
+  border: 4px solid var(--primary-color);
   transition: all 0.15s ease;
   font-size: 16px;
   line-height: 24px;
@@ -147,7 +148,8 @@
 }
 
 .navCreateAccount:hover {
-  opacity: 90%;
+  opacity: 60%;
+  border: 4px solid #f4ebff;
 }
 
 /* ─────────────► Responsive Section */
@@ -193,7 +195,7 @@
 
   .line {
     fill: none;
-    stroke: var(--main-color);
+    stroke: var(--primary-color);
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 3;
