@@ -1,3 +1,138 @@
-.header{
-    
+.navContainer {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: var(--first-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.navWrapper {
+  margin: 28px 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navSearch {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  width: 501.83px;
+  gap: 55px;
+}
+
+.navSearchInput {
+  height: 44px;
+  width: 367px;
+  border: 1px solid var(--second-text);
+  border-radius: 8px;
+}
+
+.navLogo {
+  height: 72px;
+  width: 79.83px;
+}
+
+.navLogo img {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.navLinks {
+  display: flex;
+
+  gap: 20px;
+}
+
+.navLinks li,
+.navSign {
+  color: var(--first-text);
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.15s ease;
+}
+
+.navLinks li:hover,
+.navSign:hover {
+  transform: translateY(1px);
+}
+
+.navLinks .active {
+  color: var(--main-color);
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 20px;
+}
+
+.navCreateAccount {
+  padding: 8px 16px;
+  background: var(--main-color);
+  border: 4px solid #f4ebff;
+  border-radius: 12px;
+  transition: all 0.15s ease;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.navCreateAccount:hover {
+  opacity: 90%;
+}
+
+.navSearchInput {
+  color: var(--second-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0px 8px;
+}
+
+.navSearchInput svg:hover {
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.navSearchInput input,
+.navSearchInput input:focus {
+  outline: none;
+  color: var(--first-text);
+  flex: 1;
+  font-size: 15px;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+}
+
+.dropDown:hover .downIco {
+  transform: rotate(180deg);
+}
+
+.downIco {
+  transition: all 0.3s ease;
+}
+
+.dropDown {
+  color: var(--main-color);
+  background: #effff2;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  margin-right: -7px;
+  position: relative;
+  z-index: 2;
+}
+
+.dropDown span {
+  margin-right: 8px;
 }
