@@ -1,4 +1,3 @@
-import React from 'react';
 import './Header.css';
 import Logo from './../../assets/img/logo/logo.png';
 import { IoSearch } from 'react-icons/io5';
@@ -6,7 +5,7 @@ import { FaChevronDown } from 'react-icons/fa';
 
 export default function header() {
   return (
-    <div className='navContainer'>
+    <header className='navContainer'>
       <div className='navWrapper'>
         <div className='navSearch'>
           <div className='navLogo'>
@@ -38,6 +37,6 @@ export default function header() {
           <span className='navCreateAccount'>Create free account</span>
         </div>
       </div>
-    </div>
+    </header>
   );
 }
