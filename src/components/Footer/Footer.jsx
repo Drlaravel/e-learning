@@ -5,7 +5,7 @@ import {
   FaFacebook,
   FaLinkedin,
   FaTwitter,
-  FaBasketballBall,
+  FaDribbble,
 } from 'react-icons/fa';
 import Logo from '../../assets/img/logo/logo.png';
 
@@ -59,7 +59,7 @@ export default function Footer() {
             <FaLinkedin size={24} />
             <FaFacebook size={24} />
             <FaGithub size={24} />
-            <FaBasketballBall size={24} />
+            <FaDribbble size={24} />
           </Col>
         </Row>
       </div>
