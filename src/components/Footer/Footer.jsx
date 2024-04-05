@@ -1,5 +1,5 @@
 import { Row, Col } from 'react-bootstrap/';
-import './footer.css';
+import './Footer.css';
 import {
   FaGithub,
   FaFacebook,
