@@ -1,12 +1,10 @@
-import { useState } from "react";
-import './header.css';
+import { useState } from 'react';
+import './Header.css';
 import Logo from './../../assets/img/logo/logo.png';
 import { IoSearch } from 'react-icons/io5';
 import { FaChevronDown } from 'react-icons/fa';
 
-
 export default function Header() {
-  const [searchBoxButton, setsearchBoxButton] = useState(false)
   return (
     <header className='navContainer'>
       <div className='navWrapper'>
@@ -23,14 +21,12 @@ export default function Header() {
               name='navSearch'
               id='navSearch'
               placeholder='Want to Learn?'
-
             />
 
-            <button className={`dropDown ${searchBoxButton ? 'active' : ''}`} onClick={() => setsearchBoxButton(!searchBoxButton)}>
+            <button className='dropDown'>
               <span>Explore</span>
               <FaChevronDown className='downIco' />
             </button>
-
           </div>
         </div>
         <div className='navLinks'>

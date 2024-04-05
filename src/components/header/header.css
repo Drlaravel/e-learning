@@ -71,7 +71,7 @@
   color: var(--primary-color);
 }
 
-.dropDown.active .downIco {
+.dropDown:focus .downIco {
   transform: rotate(180deg);
 }
 
