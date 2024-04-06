@@ -13,9 +13,8 @@
   --second-bg: rgb(243, 243, 243);
   --primary-color: hsl(161, 70%, 42%);
   --first-text: rgb(17, 24, 30);
-  --second-text: rgb(151, 152, 152);
+  --second-text: #646464;
 }
-
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

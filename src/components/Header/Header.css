@@ -5,6 +5,7 @@
   position: fixed;
   top: 0;
   color: var(--first-text);
+  z-index: 99;
 }
 
 .navWrapper {
