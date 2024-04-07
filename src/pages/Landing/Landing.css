@@ -111,7 +111,7 @@
   margin-top: -4px;
 }
 
-/* ─────────────► Responsive Section */
+/* ─────────────► Responsive Section Of Home */
 
 @media (max-width: 1200px) {
   .homeWrapper {
@@ -130,4 +130,81 @@
   .homeIdea {
     grid-template-columns: 1fr;
   }
+}
+
+/* ─────────────► Services Section */
+
+.services {
+  height: 500px;
+  padding: 1.2em 7em !important;
+}
+
+.servicesTitle {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+.servicesSubTitle {
+  margin: auto;
+  max-width: 600px;
+  font-size: 2em;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.servicesCard {
+  height: 243px;
+  width: 373;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: 1px solid rgba(149, 157, 165, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cardTitle h1 {
+  font-size: 1.3em;
+}
+
+.cardTitle img {
+  height: 48px;
+}
+
+.servicesCard a {
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.swiper-pagination {
+  position: static !important;
+  margin-top: 40px;
+}
+
+.primaryBg {
+  background: var(--primary-color);
+  color: var(--first-bg);
+}
+
+.swiper-pagination-bullet {
+  height: 10px !important;
+  width: 10px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary-color) !important;
+  width: 40px !important;
+  height: 10px !important;
+  border-radius: 6px !important;
 }
