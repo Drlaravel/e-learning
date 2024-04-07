@@ -65,12 +65,10 @@
   display: flex;
   gap: 34px;
   width: 100%;
-  background: lightgrey;
 }
 
 .homeIdea div {
   height: 32px;
-  background: lightblue;
   display: flex;
   text-wrap: nowrap;
   align-items: center;
