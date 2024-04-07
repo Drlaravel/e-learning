@@ -13,19 +13,58 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { IoIosArrowForward } from 'react-icons/io';
+import OurServices from '../../components/SwiperCards/OurServices/OurServices';
+import { useState } from 'react';
 import './Landing.css';
 
 export default function Landing() {
+  const ourServices = useState([
+    {
+      id: 1,
+      link: '#',
+      img: Interaction,
+      title: 'Interaction Design',
+      subTitle: 'Lessons on design that cover the most recent developments.',
+    },
+    {
+      id: 2,
+      link: '#',
+      img: UserInterface,
+      title: 'User Interface Design',
+      subTitle:
+        ' User Interface Design courses that cover the most recent trends',
+    },
+    {
+      id: 3,
+      link: '#',
+      img: Ux,
+      title: 'UX Design Course',
+      subTitle:
+        'Classes in development that cover the most recent advancements in web.',
+    },
+    {
+      id: 4,
+      link: '#',
+      img: UserInterface,
+      title: 'User Interface Design',
+      subTitle:
+        ' User Interface Design courses that cover the most recent trends',
+    },
+    {
+      id: 5,
+      link: '#',
+      img: Ux,
+      title: 'UX Design Course',
+      subTitle:
+        'Classes in development that cover the most recent advancements in web.',
+    },
+  ]);
   return (
     <>
       <div className='home'>
         <div className='homeWrapper'>
           <div className='homeContent'>
             <h1 className='homeTitle'>
-              {/* Up Your <span className='hG'> Skills </span> To
-            <span className='hG'> Advance</span> Your
-            <span className='hG'> career</span> path */}
               <p>
                 Up Your <span className='hG'>Skills</span>
               </p>
@@ -92,8 +131,6 @@ export default function Landing() {
           spaceBetween={40}
           pagination={{ clickable: true }}
           slidesPerView={3}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
           breakpoints={{
             0: {
               slidesPerView: 1,
@@ -109,76 +146,14 @@ export default function Landing() {
             },
           }}
         >
-          <SwiperSlide>
-            <a href='#' className='servicesCard primaryBg'>
-              <div className='cardTitle'>
-                <img src={Interaction} alt='ico' />
-                <h1>Interaction Design</h1>
-              </div>
-              <p>Lessons on design that cover the most recent developments.</p>
-              <a style={{ color: '#fff' }} href='#'>
-                Learn More <IoIosArrowForward />
-              </a>
-            </a>
-          </SwiperSlide>
-          <SwiperSlide>
-            <a href='#' className='servicesCard'>
-              <div className='cardTitle'>
-                <img src={UserInterface} alt='ico' />
-                <h1>UX Design Course</h1>
-              </div>
-              <p>
-                Classes in development that cover the most recent advancements
-                in web.
-              </p>
-              <a href='#'>
-                Learn More <IoIosArrowForward />
-              </a>
-            </a>
-          </SwiperSlide>
-          <SwiperSlide>
-            <a href='#' className='servicesCard'>
-              <div className='cardTitle'>
-                <img src={Ux} alt='ico' />
-                <h1>User Interface Design</h1>
-              </div>
-              <p>
-                User Interface Design courses that cover the most recent trends
-              </p>
-              <a href='#'>
-                Learn More <IoIosArrowForward />
-              </a>
-            </a>
-          </SwiperSlide>
-          <SwiperSlide>
-            <a href='#' className='servicesCard'>
-              <div className='cardTitle'>
-                <img src={UserInterface} alt='ico' />
-                <h1>UX Design Course</h1>
-              </div>
-              <p>
-                Classes in development that cover the most recent advancements
-                in web.
-              </p>
-              <a href='#'>
-                Learn More <IoIosArrowForward />
-              </a>
-            </a>
-          </SwiperSlide>
-          <SwiperSlide>
-            <a href='#' className='servicesCard'>
-              <div className='cardTitle'>
-                <img src={Ux} alt='ico' />
-                <h1>User Interface Design</h1>
-              </div>
-              <p>
-                User Interface Design courses that cover the most recent trends
-              </p>
-              <a href='#'>
-                Learn More <IoIosArrowForward />
-              </a>
-            </a>
-          </SwiperSlide>
+          {ourServices[0].map((service) => {
+            return (
+              <SwiperSlide key={service.id}>
+                <OurServices {...service}></OurServices>
+              </SwiperSlide>
+            );
+          })}
+          {console.log(ourServices)}
         </Swiper>
       </div>
     </>
