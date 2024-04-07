@@ -1,4 +1,3 @@
-import './Landing.css';
 import Pers from '../../assets/img/logo/pers.png';
 import Bag from '../../assets/img/logo/bag.png';
 import Blub from '../../assets/img/logo/blub.png';
@@ -15,6 +14,7 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { IoIosArrowForward } from 'react-icons/io';
+import './Landing.css';
 
 export default function Landing() {
   return (
@@ -94,21 +94,35 @@ export default function Landing() {
           slidesPerView={3}
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            840: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1190: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+          }}
         >
           <SwiperSlide>
-            <div className='servicesCard primaryBg'>
+            <a href='#' className='servicesCard primaryBg'>
               <div className='cardTitle'>
                 <img src={Interaction} alt='ico' />
                 <h1>Interaction Design</h1>
               </div>
               <p>Lessons on design that cover the most recent developments.</p>
-              <a style={{ color: '#fff' }} href=''>
+              <a style={{ color: '#fff' }} href='#'>
                 Learn More <IoIosArrowForward />
               </a>
-            </div>
+            </a>
           </SwiperSlide>
           <SwiperSlide>
-            <div className='servicesCard'>
+            <a href='#' className='servicesCard'>
               <div className='cardTitle'>
                 <img src={UserInterface} alt='ico' />
                 <h1>UX Design Course</h1>
@@ -117,13 +131,13 @@ export default function Landing() {
                 Classes in development that cover the most recent advancements
                 in web.
               </p>
-              <a href=''>
+              <a href='#'>
                 Learn More <IoIosArrowForward />
               </a>
-            </div>
+            </a>
           </SwiperSlide>
           <SwiperSlide>
-            <div className='servicesCard'>
+            <a href='#' className='servicesCard'>
               <div className='cardTitle'>
                 <img src={Ux} alt='ico' />
                 <h1>User Interface Design</h1>
@@ -131,13 +145,13 @@ export default function Landing() {
               <p>
                 User Interface Design courses that cover the most recent trends
               </p>
-              <a href=''>
+              <a href='#'>
                 Learn More <IoIosArrowForward />
               </a>
-            </div>
+            </a>
           </SwiperSlide>
           <SwiperSlide>
-            <div className='servicesCard'>
+            <a href='#' className='servicesCard'>
               <div className='cardTitle'>
                 <img src={UserInterface} alt='ico' />
                 <h1>UX Design Course</h1>
@@ -146,13 +160,13 @@ export default function Landing() {
                 Classes in development that cover the most recent advancements
                 in web.
               </p>
-              <a href=''>
+              <a href='#'>
                 Learn More <IoIosArrowForward />
               </a>
-            </div>
+            </a>
           </SwiperSlide>
           <SwiperSlide>
-            <div className='servicesCard'>
+            <a href='#' className='servicesCard'>
               <div className='cardTitle'>
                 <img src={Ux} alt='ico' />
                 <h1>User Interface Design</h1>
@@ -160,10 +174,10 @@ export default function Landing() {
               <p>
                 User Interface Design courses that cover the most recent trends
               </p>
-              <a href=''>
+              <a href='#'>
                 Learn More <IoIosArrowForward />
               </a>
-            </div>
+            </a>
           </SwiperSlide>
         </Swiper>
       </div>

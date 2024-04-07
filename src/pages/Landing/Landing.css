@@ -135,8 +135,7 @@
 /* ─────────────► Services Section */
 
 .services {
-  height: 500px;
-  padding: 1.2em 7em !important;
+  padding: 1.2em 7em;
 }
 
 .servicesTitle {
@@ -157,6 +156,7 @@
 .servicesCard {
   height: 243px;
   width: 373;
+  min-width: 285px;
   padding: 40px;
   border-radius: 12px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -188,7 +188,7 @@
 }
 
 .swiper-pagination {
-  position: static !important;
+  position: static;
   margin-top: 40px;
 }
 
@@ -197,14 +197,18 @@
   color: var(--first-bg);
 }
 
+.primaryBg:hover {
+  color: var(--first-bg);
+}
+
 .swiper-pagination-bullet {
-  height: 10px !important;
-  width: 10px !important;
+  height: 10px;
+  width: 10px;
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--primary-color) !important;
-  width: 40px !important;
-  height: 10px !important;
-  border-radius: 6px !important;
+  background: var(--primary-color);
+  width: 40px;
+  height: 10px;
+  border-radius: 6px;
 }
