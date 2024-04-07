@@ -1,20 +1,22 @@
 .home {
-  height: 100vh;
-  padding: 28px 120px;
+  min-height: 100vh;
+  padding: 1.2em 7em;
   padding-top: 100px;
   max-width: 100vw;
   background: var(--first-bg);
 }
 
 .homeImg {
-  max-height: 516px;
-  max-width: 623px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 40px;
-  min-height: 296px;
-  min-width: 375px;
+  width: 100%;
+  background-color: lightcyan;
 }
 
 .homeImg img {
+  max-width: 623px;
   height: 100%;
   width: 100%;
 }
@@ -25,14 +27,17 @@
 }
 
 .homeContent {
-  margin-top: 50px;
+  background: lightgoldenrodyellow;
+  width: 100%;
+  margin-top: 5em;
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 2em;
 }
 
 .homeTitle {
-  line-height: 60px;
+  font-size: 3em;
+  line-height: 1.2em;
   color: var(--first-text);
 }
 
@@ -60,20 +65,26 @@
 .homeIdea {
   display: flex;
   gap: 34px;
+  width: 100%;
+  background: lightgrey;
 }
 
 .homeIdea div {
   height: 32px;
+  background: lightblue;
   display: flex;
   text-wrap: nowrap;
   align-items: center;
-  gap: 8px;
-  font-size: 16px;
+  justify-content: center;
+  width: 100%;
+  gap: 0.8em;
+  font-size: 1em;
   color: var(--second-text);
 }
 
 .homeIdea div img {
   height: 100%;
+  max-height: 36px;
 }
 
 .logo {
@@ -89,14 +100,37 @@
 
 .logo div img {
   cursor: pointer;
+  height: 100%;
+  width: 100%;
 }
 
 .logo span {
-  font-size: 30px;
+  font-size: 1.8em;
   font-weight: 700;
 }
 
 .logo p {
-  font-size: 25px;
+  font-size: 1.3em;
   margin-top: -4px;
+}
+
+/* ─────────────► Responsive Section */
+
+@media (max-width: 1200px) {
+  .homeWrapper {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 790px) {
+  .homeIdea {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .homeIdea {
+    grid-template-columns: 1fr;
+  }
 }

@@ -61,16 +61,16 @@ export default function Landing() {
           <p>Collaboration</p>
         </div>
         <div>
-          <img style={{ height: 36, width: 153 }} src={Duo} alt='duo' />
+          <img style={{ maxWidth: 153 }} src={Duo} alt='duo' />
         </div>
         <div>
-          <img style={{ height: 36, width: 186 }} src={Code} alt='' />
+          <img style={{ maxWidth: 186 }} src={Code} alt='' />
         </div>
         <div>
-          <img style={{ height: 36, width: 140 }} src={Test} alt='' />
+          <img style={{ maxWidth: 140 }} src={Test} alt='' />
         </div>
         <div>
-          <img style={{ height: 36, width: 234 }} src={Magic} alt='' />
+          <img style={{ maxWidth: 234 }} src={Magic} alt='' />
         </div>
       </div>
     </div>
