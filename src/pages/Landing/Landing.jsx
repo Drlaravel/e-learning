@@ -264,6 +264,9 @@ export default function Landing() {
             );
           })}
         </Swiper>
+        <div className='btnContainer'>
+          <button className='exploreAll'>Explore All Programs</button>
+        </div>
       </div>
     </>
   );

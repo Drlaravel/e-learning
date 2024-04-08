@@ -197,3 +197,23 @@
   color: var(--second-text);
   margin-bottom: 20px;
 }
+
+.exploreAll {
+  margin: auto;
+  border: 1px solid var(--second-text);
+}
+
+.btnContainer {
+  margin: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.exploreAll {
+  transition: all 0.3s ease;
+}
+
+.exploreAll:hover {
+  color: var(--primary-color);
+}
