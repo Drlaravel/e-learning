@@ -16,6 +16,13 @@ import 'swiper/css/pagination';
 import OurServices from '../../components/SwiperCards/OurServices/OurServices';
 import { useState } from 'react';
 import './Landing.css';
+import Figma from '../../assets/img/figma.png';
+import Shoaib from '../../assets/img/shoaib.png';
+import BuildUser from '../../assets/img/buildUserInterface.png';
+import Explore from '../../components/SwiperCards/Explore/Explore';
+import Avatar from '../../assets/img/Avatar.png';
+import Avatar2 from '../../assets/img/Avatar2.png';
+import Avatar3 from '../../assets/img/Avatar3.png';
 
 export default function Landing() {
   const ourServices = useState([
@@ -57,6 +64,69 @@ export default function Landing() {
       title: 'UX Design Course',
       subTitle:
         'Classes in development that cover the most recent advancements in web.',
+    },
+  ]);
+
+  const exploreCardsContent = useState([
+    {
+      img: Figma,
+      title: 'Figma UI UX Design..',
+      subTitle:
+        'Use Figma to get a job in UI Design, User Interface, User Experience design.',
+      id: 1,
+      star: 4.3,
+      users: '(16,325)',
+      name: 'Jane Cooper',
+      avatar: Avatar,
+      price: '$17.84',
+    },
+    {
+      img: Shoaib,
+      title: 'Learn With Shoaib',
+      subTitle:
+        'Design Web Sites and Mobile Apps that Your Users Love and Return to Again.',
+      id: 2,
+      star: 3.9,
+      users: '(832)',
+      name: 'Jenny Wilson',
+      avatar: Avatar2,
+      price: '$8.99',
+    },
+    {
+      img: BuildUser,
+      title: 'Building User Interface..',
+      subTitle:
+        'Learn how to apply User Experience (UX) principles to your website designs.',
+      id: 3,
+      star: 4.2,
+      users: '(125)',
+      name: 'Esther Howard',
+      avatar: Avatar3,
+      price: '$11.70',
+    },
+    {
+      img: Shoaib,
+      title: 'Learn With Shoaib',
+      subTitle:
+        'Design Web Sites and Mobile Apps that Your Users Love and Return to Again.',
+      id: 2,
+      star: 3.9,
+      users: '(832)',
+      name: 'Jenny Wilson',
+      avatar: Avatar2,
+      price: '$8.99',
+    },
+    {
+      img: BuildUser,
+      title: 'Building User Interface..',
+      subTitle:
+        'Learn how to apply User Experience (UX) principles to your website designs.',
+      id: 3,
+      star: 4.2,
+      users: '(125)',
+      name: 'Esther Howard',
+      avatar: Avatar3,
+      price: '$11.70',
     },
   ]);
   return (
@@ -153,7 +223,46 @@ export default function Landing() {
               </SwiperSlide>
             );
           })}
-          {console.log(ourServices)}
+        </Swiper>
+      </div>
+      <div className='explore'>
+        <h1 style={{ textAlign: 'left' }} className='servicesTitle hG'>
+          Explore Programs
+        </h1>
+        <p style={{ textAlign: 'left' }} className='exploreSubTitle'>
+          Our Most Popular Class
+        </p>
+        <p className='exploreContent'>
+          Let's join our famous class, the knowledge provided will definitely be
+          useful for you.
+        </p>
+        <Swiper
+          modules={[Pagination]}
+          spaceBetween={40}
+          pagination={{ clickable: true }}
+          slidesPerView={3}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            840: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1190: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+          }}
+        >
+          {exploreCardsContent[0].map((card) => {
+            return (
+              <SwiperSlide key={card.id}>
+                <Explore {...card} />
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
     </>

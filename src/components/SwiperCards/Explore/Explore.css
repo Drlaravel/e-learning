@@ -1,0 +1,87 @@
+.exploreCard {
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: 1px solid rgba(149, 157, 165, 0.2);
+  max-height: 553px;
+  max-width: 384px;
+}
+
+.exploreCard img {
+  width: 336px;
+  height: 240px;
+}
+
+.tag {
+  font-size: 0.9em;
+  font-weight: 600;
+  padding-top: 10px;
+}
+
+.exploreCardTitle {
+  display: flex;
+  color: var(--first-text);
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  padding-left: 0px;
+}
+
+.exploreCardTitle h1 {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.exploreCardSubtitle {
+  font-size: 0.9em;
+  color: var(--second-text);
+}
+
+.rating {
+  margin: 10px;
+  margin-left: 0;
+  display: flex;
+  font-size: 0.9em;
+  align-items: center;
+  gap: 8px;
+}
+
+.rating img {
+  height: 16px;
+  width: 92px;
+}
+
+.users {
+  color: var(--second-text);
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profileWrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.profileWrapper img {
+  height: 40px;
+  width: 40px;
+}
+
+.info h1 {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.info span {
+  color: var(--second-text);
+  font-size: 0.9em;
+}
+
+.price {
+  font-size: 1.8em;
+  font-weight: 600;
+}

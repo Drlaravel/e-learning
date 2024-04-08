@@ -134,7 +134,8 @@
 
 /* ─────────────► Services Section */
 
-.services {
+.services,
+.explore {
   padding: 1.2em 7em;
 }
 
@@ -181,4 +182,18 @@
   width: 40px;
   height: 10px;
   border-radius: 6px;
+}
+
+/* ─────────────► Explore Section */
+
+.exploreSubTitle {
+  font-size: 2em;
+  font-weight: 600;
+  padding-bottom: 3px;
+}
+
+.exploreContent {
+  font-size: 1.3em;
+  color: var(--second-text);
+  margin-bottom: 20px;
 }
