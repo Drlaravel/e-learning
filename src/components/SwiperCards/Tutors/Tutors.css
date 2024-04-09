@@ -32,6 +32,7 @@
 .links {
   display: flex;
   padding: 40px 0px 30px 0px;
+  gap: 8px;
   align-items: center;
   justify-content: center;
   color: var(--second-text);
