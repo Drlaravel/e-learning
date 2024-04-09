@@ -214,3 +214,27 @@
 .exploreAll:hover {
   color: var(--primary-color);
 }
+
+/* ─────────────► Tutors Section */
+.tutors {
+  margin-top: 20px;
+  padding: 1.2em 7em;
+  margin-bottom: 20px;
+}
+
+.tutors .servicesSubTitle {
+  margin: auto;
+  padding: 8px;
+}
+.tutors .exploreContent {
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
+}
+
+.tutorsContainer {
+  display: grid;
+  margin-top: 40px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}

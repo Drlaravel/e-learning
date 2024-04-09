@@ -23,6 +23,11 @@ import Explore from '../../components/SwiperCards/Explore/Explore';
 import Avatar from '../../assets/img/Avatar.png';
 import Avatar2 from '../../assets/img/Avatar2.png';
 import Avatar3 from '../../assets/img/Avatar3.png';
+import Tutors from '../../assets/img/tutors.png';
+import Tutors2 from '../../assets/img/tutors2.png';
+import Tutors3 from '../../assets/img/tutors3.png';
+import Tutors4 from '../../assets/img/tutors4.png';
+import TutorsCardComponent from '../../components/SwiperCards/Tutors/Tutors';
 
 export default function Landing() {
   const ourServices = useState([
@@ -129,6 +134,35 @@ export default function Landing() {
       price: '$11.70',
     },
   ]);
+
+  const tutorsCard = useState([
+    {
+      img: Tutors,
+      name: 'Theresa Web',
+      skill: 'Application Support Analyst Lead',
+      content:
+        'Former co-founder of Opendoor. Early staff at Spotify and Clearbit.',
+    },
+    {
+      img: Tutors2,
+      name: 'Courtney Henry',
+      skill: 'Director, Undergraduate Analytics and Planning',
+      content: 'Lead engineering teams at Figma, Pitch, and Protocol Labs.',
+    },
+    {
+      img: Tutors3,
+      name: 'Albert Flores',
+      skill: 'Career Educator',
+      content: 'Former PM for Linear, Lambda School, and On Deck.',
+    },
+    {
+      img: Tutors4,
+      name: 'Marvin McKinney',
+      skill: 'Co-op & Internships Program & Operations Manager',
+      content: 'Former frontend dev for Linear, Coinbase, and Postscript.',
+    },
+  ]);
+
   return (
     <>
       <div className='home'>
@@ -266,6 +300,19 @@ export default function Landing() {
         </Swiper>
         <div className='btnContainer'>
           <button className='exploreAll'>Explore All Programs</button>
+        </div>
+      </div>
+      <div className='tutors'>
+        <h1 className='servicesTitle hG'>Tutors</h1>
+        <p className='servicesSubTitle'>Meet the Heroes</p>
+        <p className='exploreContent'>
+          On Weekend UX, instructors from all over the world instruct millions
+          of students. We offer the knowledge and abilities.
+        </p>
+        <div className='tutorsContainer'>
+          {tutorsCard[0].map((card) => (
+            <TutorsCardComponent {...card} />
+          ))}
         </div>
       </div>
     </>
