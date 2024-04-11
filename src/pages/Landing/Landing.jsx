@@ -28,6 +28,8 @@ import Tutors2 from '../../assets/img/tutors2.png';
 import Tutors3 from '../../assets/img/tutors3.png';
 import Tutors4 from '../../assets/img/tutors4.png';
 import TutorsCardComponent from '../../components/SwiperCards/Tutors/Tutors';
+import ReviewImg from '../../assets/img/Review.png';
+import Review from '../../components/SwiperCards/Review/Review';
 
 export default function Landing() {
   const ourServices = useState([
@@ -160,6 +162,30 @@ export default function Landing() {
       name: 'Marvin McKinney',
       skill: 'Co-op & Internships Program & Operations Manager',
       content: 'Former frontend dev for Linear, Coinbase, and Postscript.',
+    },
+  ]);
+
+  const reviewContent = useState([
+    {
+      content:
+        'Courses was fantastic! It is Master platform for those looking to start a new career, or need a refresher.',
+      img: ReviewImg,
+      name: 'Jacob Jones',
+      info: 'Student, National University',
+    },
+    {
+      content:
+        'Courses was fantastic! It is Master platform for those looking to start a new career, or need a refresher.',
+      img: ReviewImg,
+      name: 'Jacob Jones',
+      info: 'Student, National University',
+    },
+    {
+      content:
+        'Courses was fantastic! It is Master platform for those looking to start a new career, or need a refresher.',
+      img: ReviewImg,
+      name: 'Jacob Jones',
+      info: 'Student, National University',
     },
   ]);
 
@@ -314,6 +340,22 @@ export default function Landing() {
             <TutorsCardComponent {...card} />
           ))}
         </div>
+      </div>
+      <div className='review'>
+        <Swiper
+          modules={[Pagination]}
+          spaceBetween={0}
+          pagination={{ clickable: true }}
+          slidesPerView={1}
+        >
+          {reviewContent[0].map((card) => {
+            return (
+              <SwiperSlide key={card.id}>
+                <Review {...card} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </div>
     </>
   );
