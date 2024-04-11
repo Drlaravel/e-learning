@@ -30,6 +30,9 @@ import Tutors4 from '../../assets/img/tutors4.png';
 import TutorsCardComponent from '../../components/SwiperCards/Tutors/Tutors';
 import ReviewImg from '../../assets/img/Review.png';
 import Review from '../../components/SwiperCards/Review/Review';
+import blogImage from '../../assets/img/blogImage3.png';
+import blogImage2 from '../../assets/img/blogImage2.png';
+import blogImage3 from '../../assets/img/blogImage1.png';
 
 export default function Landing() {
   const ourServices = useState([
@@ -356,6 +359,62 @@ export default function Landing() {
             );
           })}
         </Swiper>
+      </div>
+      <div className='recentBlogs'>
+        <h1 className='recentBlogsTitle'>Our recent blogs</h1>
+        <div className='recentBlogsContainer'>
+          <div className='blogsLeft'>
+            <div className='smalBlog'>
+              <img src={blogImage} alt='' />
+              <div className='blogContent'>
+                <span className='blogsDate hG'>November 16, 2014</span>
+                <h1 className='blogTitle'>Three Pillars of User Delight</h1>
+                <p className='blogSubtitle'>
+                  Delight can be experienced viscerally, behaviourally, and
+                  reflectively. A great design is ...
+                </p>
+                <div className='flex'>
+                  <span className='blogTag tagResearch'>Research</span>
+                  <span className='blogTag tagUI'>UI UX</span>
+                </div>
+              </div>
+            </div>
+            <div className='smalBlog'>
+              <img src={blogImage2} alt='' />
+              <div className='blogContent'>
+                <span className='blogsDate hG'>November 16, 2014</span>
+                <h1 className='blogTitle'>Three Pillars of User Delight</h1>
+                <p className='blogSubtitle'>
+                  Delight can be experienced viscerally, behaviourally, and
+                  reflectively. A great design is ...
+                </p>
+                <div className='flex'>
+                  <span className='blogTag tagResearch'>Research</span>
+                  <span className='blogTag tagUI'>UI Design</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='blogsRight'>
+            <div className='bigBlog'>
+              <img src={blogImage3} alt='' />
+              <div className='bigBlogContainer'>
+                <span className='blogsDate hG'>November 16, 2014</span>
+                <h1 className='blogTitle'>Three Pillars of User Delight</h1>
+                <p className='blogSubtitle'>
+                  Agile methods aim to overcome usability barriers in
+                  traditional development, but post new threats to user
+                  experience quality.
+                </p>
+                <div className='flex'>
+                  <span className='blogTag tagResearch'>Research</span>
+                  <span className='blogTag tagUI'>UI Design</span>
+                  <span className='blogTag tagProgramming'>Programming</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
